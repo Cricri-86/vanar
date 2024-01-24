@@ -13,7 +13,7 @@ function checkFullName(fullName) {
         if (fragments.length != 2) {
             console.error("Incorrect spelling!")
         } else {
-            if (fragments[0].length < 2 || fragments[1] < 2) {
+            if (fragments[0].length < 2 || fragments[1].length < 2) {
                 console.error("Incorrect spelling!")
             } else {
                 if (
