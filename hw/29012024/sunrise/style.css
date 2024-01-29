@@ -1,0 +1,30 @@
+body{
+    background-color: #000;
+    color: white;
+}
+
+#sky{
+    border: 1px solid white;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+#sun{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-image: radial-gradient(rgb(150, 0, 0), rgb(110, 0, 0));
+    position: absolute;
+    transform: translate(-50%, 50%);
+    
+    bottom: 0;
+}
+
+#controls{
+    margin-top: 5px;
+}
+
+#controls input{
+    padding: 10px;
+}
