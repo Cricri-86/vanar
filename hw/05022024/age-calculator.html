@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>JS basic i-active example</title>
+
+
+</head>
+
+<body>
+<h1>Simple form | age calculator</h1>
+<input
+id = "person_dob"
+type="text"
+placeholder = "enter year of birth"
+size = "15"
+/>
+<button onclick="result.innerText= 1900 + new Date().getYear() - person_dob.value">calculate age</button>
+<h3>Your age is</h3>
+<h3 id="result">...</h3>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
