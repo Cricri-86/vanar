@@ -92,3 +92,16 @@ showIndicators(currentIndex)
 function play(){
    setInterval( next, 3000)
 }
+
+function action() {
+   switch (event.key) {
+      case "ArrowLeft":
+         prev()
+         break
+
+      case "ArrowRight":
+         next()
+         break
+
+   }
+}
