@@ -1,0 +1,54 @@
+body{
+    background-color: #222;
+}
+
+#carousel{
+    border: 5px solid #555;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+#carouselSlides{
+    border: 2px solid white;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.next, .prev{
+    padding: 5px 10px;
+    position: absolute;
+    top: 45%;
+}
+
+button.disabled{
+    opacity: 0.5;
+}
+
+.prev{
+    left: 5px;
+}
+.next{
+    right: 5px;
+}
+
+#carouselIndicators{
+    color: white;
+}
+#carouselIndicators i{
+    padding: 5px;
+}
+
+.playBtn{
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+.playBtn i {
+    font-size: 24px;
+}
+
