@@ -1,13 +1,12 @@
 //get data from the user
 function readData() {
    let data = gradesInput.value
-   //console.log(data)
-   return data
+   processData(data)
 }
 
 //parses the data
-         //"math: physics:8.5, english: 10, ... "
-         //            v 
+//"math: physics:8.5, english: 10, ... "
+//            v 
 function processData(data) {
    let values = data.split(',')
 
@@ -24,7 +23,7 @@ function processData(data) {
          mark: grade
       })
    }
-   return grades
+   logData(grades)
 }
 
 //       |
@@ -44,7 +43,14 @@ function processData(data) {
 
 // shows the data in the console
 function logData(data) {
-console.log(data)
+   console.log(data)
+   let sum = 0
+   for(let i = 0; i < data.length; i++){
+      gradesTable.innerHTML += `<tr><td>${data[i].discipline}</td><td>${data[i].mark}</td></tr>`
+      sum += data[i].mark
+   }
+   avg = sum / data.length
+   gradesTable.innerHTML += `<tr><td><b>Average mark:</b></td><td><b>${avg}</b></td></tr>`
 }
 
 
