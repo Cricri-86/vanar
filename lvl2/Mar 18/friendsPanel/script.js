@@ -4,13 +4,25 @@ const friends = [
     "pete"
 ]
 
+// const renderFriends = (parentElement, friends) => {
+//     let ul = document.createElement('ul')
+//     for (let i = 0; i < friends.length; i++) {
+//         let li = document.createElement('li')
+//         li.innerText = friends[i]
+//         ul.appendChild(li)
+//     }
+//     parentElement.appendChild(ul)
+// }
+
 const renderFriends = (parentElement, friends) => {
     let ul = document.createElement('ul')
-    for (let i = 0; i < friends.length; i++) {
+    friends.forEach ( friend => {
         let li = document.createElement('li')
-        li.innerText = friends[i]
+        li.innerText = friend
         ul.appendChild(li)
     }
+
+    )
     parentElement.appendChild(ul)
 }
 
