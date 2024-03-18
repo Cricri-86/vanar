@@ -1,0 +1,12 @@
+body{
+    background-color: #233;
+    color: white;
+    font-family: Arial;
+}
+
+#friendPanel{
+    height: 100px;
+    background-color: #444;
+    margin: 5px;
+}
+
