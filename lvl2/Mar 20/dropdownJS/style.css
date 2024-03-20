@@ -1,0 +1,33 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: Arial;
+}
+
+.dropdown>a {
+    padding: 0.5em 1em;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+.dropdown svg {
+    fill: #999;
+    width: 16px;
+    transform: translateY(2px);
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #ddd;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
