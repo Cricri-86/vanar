@@ -34,6 +34,11 @@ HW1: make it look better
     transform: rotate(25deg);
 }
 
+.lead.right{
+    transform: scaleX(-1) rotate(25deg);
+    right: 0;
+}
+
 .egg{
     width: 25px;
     height: 25px;
@@ -64,4 +69,13 @@ HW1: make it look better
 @keyframes fall{
     from {bottom: 0; left: 150px; transform: rotate(0)}
     to {bottom: -50px; left: 180px; transform: rotate(1turn)}
+}
+
+.score{
+    position: absolute;
+    height: 20px;
+    width: 500px;
+    background-color: #555;
+    color: orange;
+    bottom: -20px;
 }
