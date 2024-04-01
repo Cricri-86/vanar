@@ -58,24 +58,26 @@ const render = (parentElement, data) => {
                     } else {
 
                         Object.keys(employee[prop]).forEach(propKey => {
+                            let val = employee[prop][propKey]
+
                             let ul = document.createElement('ul')
 
                             let li = document.createElement('li')
 
 
                             if (propKey === 'email') {
-                                li.innerHTML = `${propKey} : <a href="mailto:${employee[prop][propKey]}">${employee[prop][propKey]}</a>`
+                                li.innerHTML = `${propKey} : <a href="mailto:${val}">${val}</a>`
                             } else if (propKey === 'viber') {
-                                li.innerHTML = `${propKey} : <a href="viber://chat?number=${employee[prop][propKey]}">${employee[prop][propKey]}</a>`
+                                li.innerHTML = `${propKey} : <a href="viber://chat?number=${val}">${val}</a>`
                             } else if (propKey === 'whatsapp') {
-                                li.innerHTML = `${propKey} : <a href="https://wa.me/${employee[prop][propKey]}">${employee[prop][propKey]}</a>`
+                                li.innerHTML = `${propKey} : <a href="https://wa.me/${val}">${val}</a>`
                             } else if (propKey === 'phone') {
-                                li.innerHTML = `${propKey} : <a href="tel:${employee[prop][propKey]}">${employee[prop][propKey]}</a>`
+                                li.innerHTML = `${propKey} : <a href="tel:${val}">${val}</a>`
                             }
                             else if (propKey === 'insta') {
-                                li.innerHTML = `${propKey} : <a href="https://instagram.com/${employee[prop][propKey]}">${employee[prop][propKey]}</a>`
+                                li.innerHTML = `${propKey} : <a href="https://instagram.com/${val}">${val}</a>`
                             } else {
-                                li.innerText = `${propKey} : ${employee[prop][propKey]}`
+                                li.innerText = `${propKey} : ${val}`
                             }
 
 
