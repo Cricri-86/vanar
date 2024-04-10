@@ -1,7 +1,6 @@
-let messages = []
-
-if (localStorage.getItem("messages")) {
-    messages = JSON.parse(localStorage.getItem("messages"))
+let messages = JSON.parse(localStorage.getItem("messages"))
+if (!localStorage.getItem("messages")) {
+    messages = []
 }
 
 const badWords = ["tomato", "hotdog"]
