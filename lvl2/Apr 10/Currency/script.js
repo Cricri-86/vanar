@@ -37,19 +37,27 @@ const getCurrencies = (base = 'USD') => {
     xhr.send()
 }
 
-let calcAmout = () => {
-    let amount = parseInt(inputAmount.value)
-    let resultAmount = amount * rates[toCurrency.value]
-    outputAmount.innerText = resultAmount.toFixed(2)  // .toFixed(0) for integer
+let calcAmout = (amount) => {
+
+    if ((amount < 0) || (isNaN(amount))) {
+        outputAmount.innerText = `please enter a valid amount`
+    } else {
+        outputAmount.innerText = ``
+        let resultAmount = amount * rates[toCurrency.value]
+        outputAmount.innerText = resultAmount.toFixed(2)  // .toFixed(0) for integer
+    }
 }
 
 inputAmount.addEventListener('keyup', () => {
-
-    if (fromCurrency.value != '0' && toCurrency.value != '0') {
-       calcAmout()
+    let amount = parseInt(inputAmount.value)
+    if ((amount < 0) || (isNaN(amount))) {
+        outputAmount.innerText = `please enter a valid amount`
+    }     
+    else if (fromCurrency.value != '0' && toCurrency.value != '0') {
+        calcAmout(amount)
     } else if (fromCurrency.value != '0' && toCurrency.value == '0') {
         outputAmount.innerText = `please select second currency`
-    }
+    } 
 })
 
 fromCurrency.addEventListener('change', () => {
@@ -57,8 +65,8 @@ fromCurrency.addEventListener('change', () => {
 })
 
 toCurrency.addEventListener('change', () => {
+    let amount = parseInt(inputAmount.value)
     if (inputAmount.value != '') {
-       calcAmout()
+        calcAmout(amount)
     }
-
 })
