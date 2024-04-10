@@ -12,7 +12,6 @@ const render = (messages) => {
 
     list.innerHTML = ``
 
-    if (messages != null) {
         messages.forEach(message => {
             let li = document.createElement('li')
 
@@ -30,7 +29,6 @@ const render = (messages) => {
 
             list.appendChild(li)
         })
-    }
 
 }
 
