@@ -1,0 +1,17 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: Arial;
+    margin: 20px;
+}
+
+input.select{
+    padding: 5px;
+}
+
+input{
+    width: 60px;
+}
+
+
+
